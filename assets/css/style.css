@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+body {
+    background: #ccc url("../images/swirl.png") center repeat;
+    display: flex;
+    flex-flow: column;
+    line-height: 1.5em;
+    min-height: 100vh;
+}
+
+/* Text Styling */
+    body, button { 
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+    }
+    
+    h1, h2, h3 {
+        font-family: "Fredericka the Great", Georgia, serif;
+    }
+    h1 { font-size: 3em; color: white; }
+    h2 { font-size: 2.25em; }
+
+    h1 .subtitle { font-size: 0.75em;}
+
+    a { color: #00BEE6; text-decoration: none;}
+    a:hover { color: #52CC52; }
+    a:visited { color: #B045E6; }
+    
+    strong { font-weight: bold;}
+
+/* Button styling */
+    button {
+        background: #eee;
+        border: 1px solid #0094B3;
+        color: #222;
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    button:hover, 
+    .active { 
+        background: #52CC52; 
+    }
+
+/* Sections */
+header h1, .container, .more {
+    margin: 0 auto;
+    width: 90%;
+        max-width: 1080px;
+}
+
+header, footer { 
+    background-color: #222; 
+    color: #eee; 
+    padding: 2em;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Navigation */
+    nav {
+        background: #00404D;
+        color: white;
+        padding: 0.5em; 
+    }
+        nav button {
+            background: transparent;
+            border: none;
+                border-right: 1px solid white;
+            color: white;
+            font-weight:bolder;
+            margin: 0.25em auto;
+            padding: 0.25em 1em;
+        }
+        nav button:last-of-type {
+            border: none;
+        }
+    /* Nav colors 
+        #00404D (dark blue (HSB 190, 100, 30) ) 
+        #005F73 (next blue (HSB 190, 100, 45) )
+    */
+
+/* Search */
+#search {
+    background: #005F73;
+    font-size: 1.2em;
+    padding: 0.5em 0;
+}
+#search .container {
+    display: flex;
+        justify-content: space-between;
+}
+    #search form { display: flex; }
+        #search input, #search form button {
+            border: none;
+            padding: 0.4em;
+        }
+    #search .btn-holder button {
+        margin-left: 0.5em;
+        padding: 0.5em 1em;
+    }
+
+
+/* Collapse */
+    .collapse {
+        height: 0;
+        overflow: hidden;
+        transition: all 2s ease;
+    }
+
+/* Buttons */
+#buttons {
+    background: #007F99;
+}
+#buttons .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em 0;
+}
+    #buttons button {
+        flex: 1 1 10em;
+        margin: 0.5em;
+    }
+
+/* Images */
+#images .container, #favorites .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+    figure {
+        background: #fff;
+        box-shadow: 2px 2px 5px 0 #ccc;
+        flex: 1 1 auto;
+        margin: 0.5em;
+        padding: 0.5em;
+        position: relative;
+        text-align: center;
+        width: 20%;
+        max-width: 33%;
+    }
+        figure img { width: 100%; }
+        figure .favBtn {
+            background: transparent;
+            border: none;
+            color: white;
+            display: none;
+            font-size: 1.5em;
+            padding: 1em;
+            position: absolute;
+                top: 0;
+                right: 0;
+        }
+            figure .fas {
+                color: #FFD500;
+            }
+            figure:hover .favBtn,
+            figure .favBtn .far, 
+            figure .favBtn:hover .fas {
+                display: inline-block;
+            }
+            figure .favBtn .fas, 
+            figure .favBtn:hover .far {
+                display: none;
+            }
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+/*Animating fav etc */
+#images, #favorites, #buttons {
+    transition: none;
+}
+/* #images {
+    background: rgba(0,0,0,0.5);
+}
+#favorites {
+    background: rgba(0,0,0,0.7);
+    height: 20vh;
+} */
+
+@media(max-width: 50em) {
+
+    figure {
+        width: 30%;
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 40em) {
+    figure {
+        width: 40%;
+        max-width:50%; 
+    }
+}
+
+@media(max-width: 30em) {
+    figure {
+        width: 90%;
+        max-width: 100%;
+    }
+}
