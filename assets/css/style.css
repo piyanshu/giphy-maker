@@ -190,6 +190,10 @@ footer {
         width: 30%;
         max-width: 50%;
     }
+    .main-subtitle{
+        font-size: 1.7em    !important;
+        /* color:black; */
+    }
 }
 
 @media(max-width: 40em) {
@@ -204,4 +208,5 @@ footer {
         width: 90%;
         max-width: 100%;
     }
+    
 }
